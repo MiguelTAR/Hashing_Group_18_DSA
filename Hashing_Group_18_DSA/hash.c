@@ -6,7 +6,7 @@
 #include "hash.h"
 
 // Function to perform hashing using double hashing technique
-void hash(int* hashtable, int* input, int M, int R) {
+void hashInit(int* hashtable, int* input, int M, int R) {
 
 	int i, j;
 	

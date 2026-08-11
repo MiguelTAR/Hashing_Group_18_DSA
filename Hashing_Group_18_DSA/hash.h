@@ -5,7 +5,7 @@
 #define hash_h
 
 // Function to perform hashing
-void hash(int* hashtable, int* input, int M, int R);
+void hashInit(int* hashtable, int* input, int M, int R);
 
 
 
