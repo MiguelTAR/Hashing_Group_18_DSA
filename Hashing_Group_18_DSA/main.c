@@ -25,7 +25,7 @@ int main() {
 	int R=5;
 
 	//variable declarations
-	int hashtable[21];
+	int hashtable[21] = {0};
 	int i;
 
 	//calling the hashInit function to fill the hash table
