@@ -11,7 +11,7 @@ void hashInit(int* hashtable, int* input, int M, int R) {
 	int i, j;
 	
 	for (i = 0; i < M; i++) {
-		hashtable[i] = -1; // Initialize the hashtable with -1	
+		hashtable[i] = -1; // Initializing the hashtable with -1	
 	}
 	for (i = 0; i < M; i++) {
 		int key = input[i];
@@ -21,7 +21,7 @@ void hashInit(int* hashtable, int* input, int M, int R) {
 
 	for (j = 0; j < M; j++) {
 			int index = (h1 + j * h2) % M; // Double hashing
-			// Check if the index is empty
+			// Checking if the index is empty
 			if (hashtable[index] == -1) {
 				hashtable[index] = key;
 				break;
