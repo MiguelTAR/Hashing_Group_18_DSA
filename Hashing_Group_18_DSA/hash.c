@@ -5,13 +5,15 @@
 #include <stdlib.h>
 #include "hash.h"
 
+#define EMPTY_SLOT -1
+
 // Function to perform hashing using double hashing technique
 void hashInit(int* hashtable, int* input, int M, int R) {
 
 	int i, j;
 	
 	for (i = 0; i < M; i++) {
-		hashtable[i] = -1; // Initializing the hashtable with -1	
+		hashtable[i] = EMPTY_SLOT; // Initializing the hashtable with -1	
 	}
 	for (i = 0; i < M; i++) {
 		int key = input[i];
@@ -22,7 +24,7 @@ void hashInit(int* hashtable, int* input, int M, int R) {
 	for (j = 0; j < M; j++) {
 			int index = (h1 + j * h2) % M; // Double hashing
 			// Checking if the index is empty
-			if (hashtable[index] == -1) {
+			if (hashtable[index] == EMPTY_SLOT) {
 				hashtable[index] = key;
 				break;
 			}
