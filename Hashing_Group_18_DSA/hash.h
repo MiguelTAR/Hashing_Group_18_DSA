@@ -1,8 +1,10 @@
+//Header file for hash 
 #pragma once
 
 #ifndef hash_h
 #define hash_h
 
+// Function to perform hashing
 void hash(int* hashtable, int* input, int M, int R);
 
 
