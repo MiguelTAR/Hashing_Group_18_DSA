@@ -18,6 +18,7 @@ void hashInit(int* hashtable, int* input, int M, int R) {
 		int h1 = key % M; // Primary hash function
 		int h2 = R - (key % R); // Secondary hash function
 
+
 	for (j = 0; j < M; j++) {
 			int index = (h1 + j * h2) % M; // Double hashing
 			// Check if the index is empty
@@ -29,3 +30,9 @@ void hashInit(int* hashtable, int* input, int M, int R) {
 
 	}
 }
+
+/*
+The time complexity of the hashInit function is 0(M)is the avarage case because
+the average case is much better due to the use of double hashing,
+which reduces clustering and improves the distribution of keys in the hash table. Therefore, the average time complexity is O(1).
+*/ 
